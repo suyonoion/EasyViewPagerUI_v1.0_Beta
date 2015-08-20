@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <com.maaadgroup.viewpagergb.EasyViewpagerUI android:id="@+id/id_EasyViewpagerUI" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <android.support.v4.view.PagerTabStrip android:textColor="#ffffffff" android:id="@+id/id_Judul_Halaman_EasyViewpagerUI" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top" android:background="#fffea636">
+        </android.support.v4.view.PagerTabStrip>
+        <LinearLayout android:id="@+id/id_Halaman_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical"
+            android:gravity="center">
+            <include layout="@layout/include_ke_home" android:background="@drawable/bingkai_halaman" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/id_Halaman_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical"
+            android:gravity="center">
+            <TextView android:background="@drawable/bingkai_halaman"  android:textSize="70sp" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/Judul_Halaman_2" android:textColor="#fffea636"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/id_Halaman_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical"
+            android:gravity="center">
+            <TextView android:background="@drawable/bingkai_halaman"  android:textSize="70sp" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/Judul_Halaman_3" android:textColor="#fffea636"
+                android:gravity="center" />
+        </LinearLayout>
+    </com.maaadgroup.viewpagergb.EasyViewpagerUI>
+    <LinearLayout android:id="@+id/drawer_kiri" android:layout_width="300dip" android:layout_height="fill_parent" android:layout_gravity="start" android:choiceMode="singleChoice" android:divider="@android:color/transparent" android:dividerHeight="0dp" android:background="#ffffffff" android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/maaadgroup"
+            android:background="#fffea636" />
+
+        <com.maaadgroup.viewpagergb.JalankanSetting
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/drawer_kanan" android:layout_width="300dip" android:layout_height="fill_parent" android:layout_gravity="end" android:choiceMode="singleChoice" android:divider="@android:color/transparent" android:dividerHeight="0dp" android:background="#ffffffff" android:orientation="vertical">
+        <include layout="@layout/versi"/>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

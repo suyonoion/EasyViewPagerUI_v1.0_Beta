@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="EasyViewPagerUI Settings" android:icon="@drawable/logo">
+    <PreferenceCategory android:title="Ganti Animasi">
+        <ListPreference
+            android:key="gantiANIM"
+            android:title="Pilih Animasi"
+            android:summary="Mengganti atau memilih animasi halaman EasyViewpagerUI"
+            android:entries="@array/stringanim"
+            android:entryValues="@array/stringanim"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tampilkan">
+        <ListPreference
+            android:key="getCount"
+            android:title="Jumlah Halaman"
+            android:summary="Mengatur berapa halaman yang harus ditampilkan"
+            android:entries="@array/stringhalaman"
+            android:entryValues="@array/nilaiinteger"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Ganti Judul">
+        <EditTextPreference android:key="setJudul1" android:title="Halaman 1" android:summary="Mengganti judul halaman 1" android:dialogTitle="Masukkan judul 1"/>
+        <EditTextPreference android:key="setJudul2" android:title="Halaman 2" android:summary="Mengganti judul halaman 2" android:dialogTitle="Masukkan judul 2"/>
+        <EditTextPreference android:key="setJudul3" android:title="Halaman 3" android:summary="Mengganti judul halaman 3" android:dialogTitle="Masukkan judul 3"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Tentang">
+        <Preference android:title="EasyViewPagerUI Version" android:summary="v1.0 Beta"/>
+        <Preference android:title="Build Number" android:summary="EasyVPui_v1.0_Beta_Setting_GB+_20150817"/>
+        <PreferenceScreen android:icon="@drawable/logo" android:title="Dev" android:summary="Suyono (ion)">
+            <PreferenceCategory android:title="Facebook Profile">
+                <Preference android:title="" android:summary="https://www.facebook.com/suyono.ion">
+                <intent android:action="android.intent.action.VIEW"
+                        android:data="https://www.facebook.com/suyono.ion" />
+                </Preference>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="GitHub">
+                <Preference android:title="" android:summary="https://www.github.com/suyonoion">
+                <intent android:action="android.intent.action.VIEW"
+                        android:data="https://www.github.com/suyonoion" />
+                </Preference>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

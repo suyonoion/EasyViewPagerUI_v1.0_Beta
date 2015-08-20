@@ -1,0 +1,113 @@
+<resources>
+
+    <string name="Judul_Halaman_1">Satu</string>
+    <string name="Judul_Halaman_2">Dua</string>
+    <string name="Judul_Halaman_3">Tiga</string>
+    <string name="str_pengaturan_easyviewpagerui">Pengaturan EasyViewPagerUI</string>
+    <string name="str_preview">Preview</string>
+    <string name="str_restart_systemui">Restart SystemmUI</string>
+    <string name="str_txt_dia">Agar ngefek, diperlukan tindakan Restart SystemUI. Jika tidak bekerja, lakukan Reboot atau silahkan pilih Optional berikut ini. Yakin ingin merestart SystemUI ?</string>
+    <string name="str_ya">Ya</string>
+    <string name="str_nantisaja">Nanti Saja</string>
+    <string name="str_bonus">Optional ( Bonus )</string>
+    <string name="str_reboot">Reboot Phone</string>
+    <string name="str_recovery">Reboot Recovery</string>
+    <string name="str_modar">Shutdown Phone</string>
+    <string name="string_easyviewpagerui">EasyViewPagerUI</string>
+    <string name="str_maaad">Mediatek Android Art and Dev (Reborn)</string>
+    <string name="str_fbgroup">Official FB Group :</string>
+    <string name="str_urlfbgroup">https://www.facebook.com/groups/maaadreborn</string>
+    <string name="str_blog">Official Blog :</string>
+    <string name="str_urlblog">http://MaaadOn.blogspot.com/</string>
+    <string name="str_fanspage">Official Fanspage :</string>
+    <string name="str_urlfanspage">https://www.facebook.com/maaadpage</string>
+    <string name="str_webforum">Official Website Forum :</string>
+    <string name="str_urlwebforum">http://MaaadGroup.com/</string>
+    <string name="str_betavertion">Beta Version</string>
+    <string name="str_angkavertion">v1.0 Beta</string>
+    <string name="str_settingfor">Setting GB+</string>
+    <string name="copyright">© 2015 MaaadGroup.com | All rights reserved</string>
+    <string-array name="stringhalaman">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="nilaiinteger">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="stringanim">
+        <item>Flash</item>
+        <item>Pulse</item>
+        <item>RubberBand</item>
+        <item>Shake</item>
+        <item>Swing</item>
+        <item>Wobble</item>
+        <item>Bounce</item>
+        <item>Tada</item>
+        <item>StandUp</item>
+        <item>Wave</item>
+
+        <item>RollIn</item>
+        <item>RollOut</item>
+
+        <item>BounceIn</item>
+        <item>BounceInDown</item>
+        <item>BounceInLeft</item>
+        <item>BounceInRight</item>
+        <item>BounceInUp</item>
+
+        <item>FadeIn</item>
+        <item>FadeInUp</item>
+        <item>FadeInDown</item>
+        <item>FadeInLeft</item>
+        <item>FadeInRight</item>
+
+        <item>FadeOut</item>
+        <item>FadeOutDown</item>
+        <item>FadeOutLeft</item>
+        <item>FadeOutRight</item>
+        <item>FadeOutUp</item>
+
+        <item>FlipInX</item>
+        <item>FlipOutX</item>
+        <item>FlipInY</item>
+        <item>FlipOutY</item>
+        <item>RotateIn</item>
+        <item>RotateInDownLeft</item>
+        <item>RotateInDownRight</item>
+        <item>RotateInUpLeft</item>
+        <item>RotateInUpRight</item>
+
+        <item>RotateOut</item>
+        <item>RotateOutDownLeft</item>
+        <item>RotateOutDownRight</item>
+        <item>RotateOutUpLeft</item>
+        <item>RotateOutUpRight</item>
+
+        <item>SlideInLeft</item>
+        <item>SlideInRight</item>
+        <item>SlideInUp</item>
+        <item>SlideInDown</item>
+
+        <item>SlideOutLeft</item>
+        <item>SlideOutRight</item>
+        <item>SlideOutUp</item>
+        <item>SlideOutDown</item>
+
+        <item>ZoomIn</item>
+        <item>ZoomInDown</item>
+        <item>ZoomInLeft</item>
+        <item>ZoomInRight</item>
+        <item>ZoomInUp</item>
+
+        <item>ZoomOut</item>
+        <item>ZoomOutDown</item>
+        <item>ZoomOutLeft</item>
+        <item>ZoomOutRight</item>
+        <item>ZoomOutUp</item>
+    </string-array>
+</resources>

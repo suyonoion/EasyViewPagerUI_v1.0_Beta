@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_fbgroup"
+        android:textStyle="bold"
+        android:textColor="#ffff0500" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_urlfbgroup"
+        android:textStyle="italic"
+        android:autoLink="all" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_blog"
+        android:textColor="#ffff0500"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_urlblog"
+        android:textStyle="italic"
+        android:autoLink="all" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_fanspage"
+        android:textStyle="bold"
+        android:textColor="#ffff0500" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_urlfanspage"
+        android:textStyle="italic"
+        android:autoLink="all" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_webforum"
+        android:textStyle="bold"
+        android:textColor="#ffff0500" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_urlwebforum"
+        android:textStyle="italic"
+        android:autoLink="all" />
+</LinearLayout>

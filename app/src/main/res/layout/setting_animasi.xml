@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+    android:clickable="false"
+    android:background="#ffffffff">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#80870800"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dev_setting"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:contentDescription="" />
+
+        <Button
+            android:text="@string/str_pengaturan_easyviewpagerui"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tombol"
+            android:textColor="#ffffffff"
+            android:background="#00000000"
+            android:gravity="left|center"
+            android:textStyle="italic"
+            android:paddingLeft="7dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#80870800"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dev_setting"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp" />
+
+        <Button
+            android:text="@string/str_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/previewnya"
+            android:textColor="#ffffffff"
+            android:background="#00000000"
+            android:gravity="left|center"
+            android:textStyle="italic"
+            android:paddingLeft="7dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#80870800"
+        android:layout_margin="4dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dev_setting"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp" />
+
+        <Button
+            android:text="@string/str_restart_systemui"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/restartui"
+            android:textColor="#ffffffff"
+            android:background="#00000000"
+            android:gravity="left|center"
+            android:textStyle="italic"
+            android:paddingLeft="7dp" />
+    </LinearLayout>
+
+</LinearLayout>

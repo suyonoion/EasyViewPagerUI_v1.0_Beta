@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:background="@drawable/background_halaman"
+        android:weightSum="1">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/string_easyviewpagerui" android:layout_gravity="center_horizontal" android:background="#ff45c114" android:gravity="center" android:textColor="#ffffffff"
+            android:padding="5dp"
+            android:textStyle="bold" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:layout_weight="2">
+                <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/logo_maaad" />
+
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="1"
+                android:layout_weight="1"
+                android:background="#fff0f0f0">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#80c4fbbd"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_maaad"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="#fffea636"
+                        android:textColor="#ffffffff" />
+
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <include layout="@layout/list_ketgroup"/>
+                    </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

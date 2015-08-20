@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="194dp"
+            android:src="@drawable/logo"
+            android:background="#ff110265" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/copyright"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:background="#ff110265"
+        android:textStyle="italic"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_betavertion"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="#ffffffff"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:background="#ff40b2ff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_easyviewpagerui"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ff110265"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_angkavertion"
+                android:textColor="#ff110265"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_settingfor"
+                android:textColor="#ffa7a7a7"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+</LinearLayout>
