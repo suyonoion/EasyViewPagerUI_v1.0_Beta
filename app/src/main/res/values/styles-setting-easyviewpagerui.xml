@@ -1,19 +1,46 @@
 <resources>
-    <style name="NonAktif">
 
+    <!-- more declaration are truncated ...... -->
+    <style name="None">
     </style>
-    <style name="Merah">
-       <item name="android:background">#ffff0500</item>
-        <item name="android:textColor">#ffffffff</item>
+    <style name="Tema1">
+        <!-- Override properties according to your need -->
+        <item name="android:background">#31ff0500</item>
+        <item name="android:textColor">#ffff0500</item>
+        <item name="android:colorBackground">#31ff0500</item>
+        <item name="android:colorForeground">#53ff0500</item>
+
+        <item name="android:textColorPrimary">#ff0000</item>
+        <item name="android:textColorSecondary">#0000ff</item>
+        <item name="android:textColorTertiary">#00ff00</item>
+        <item name="android:textColorPrimaryDisableOnly">#888888</item>
+        <item name="android:textColorHint">#ffff07d0</item>
     </style>
-    <style name="Kuning">
-        <item name="android:background">#fffffc03</item>
-        <item name="android:textColor">#ff870800</item>
+    <style name="Tema2">
+        <item name="android:background">#31ff0500</item>
+        <item name="android:textColor">#ffff6526</item>
+        <item name="android:colorBackground">#31fea636</item>
+        <item name="android:colorForeground">#6bff6526</item>
+
+        <item name="android:textColorPrimary">#fffea636</item>
+        <item name="android:textColorSecondary">#0000ff</item>
+        <item name="android:textColorTertiary">#00ff00</item>
+        <item name="android:textColorPrimaryDisableOnly">#888888</item>
+        <item name="android:textColorHint">#dfc5c203</item>
     </style>
-    <style name="Hijau">
-        <item name="android:background">#ff3dd213</item>
-        <item name="android:textColor">#ffffffff</item>
+    <style name="Tema3">
+        <item name="android:background">#2d3dd213</item>
+        <item name="android:textColor">#ff2b8f0e</item>
+        <item name="android:colorBackground">#313dd213</item>
+        <item name="android:colorForeground">#414bfe15</item>
+
+        <item name="android:textColorPrimary">#ff3dd213</item>
+        <item name="android:textColorSecondary">#0000ff</item>
+        <item name="android:textColorTertiary">#00ff00</item>
+        <item name="android:textColorPrimaryDisableOnly">#888888</item>
+        <item name="android:textColorHint">#7d2fa510</item>
     </style>
+
     <string name="Judul_Halaman_1">Satu</string>
     <string name="Judul_Halaman_2">Dua</string>
     <string name="Judul_Halaman_3">Tiga</string>
@@ -38,18 +65,18 @@
     <string name="str_webforum">Official Website Forum :</string>
     <string name="str_urlwebforum">http://MaaadGroup.com/</string>
     <string name="str_betavertion">Beta Version</string>
-    <string name="str_angkavertion">v1.1 Beta</string>
+    <string name="str_angkavertion">v1.2 Beta 2</string>
     <string name="str_settingfor">Setting Transisi GB+</string>
-    <string name="easyvpui_build_number">EasyVPui_v1.1_Beta_Setting_Transisi_GB+_20150824</string>
+    <string name="easyvpui_build_number">EasyVPui_v1.2_Beta2_Setting_Transisi_GB+_20150825</string>
     <string name="copyright">© 2015 MaaadGroup.com | All rights reserved</string>
     <string-array name="stringtema">
         <item>None</item>
-        <item>Merah</item>
-        <item>Kuning</item>
-        <item>Hijau</item>
+        <item>Tema1</item>
+        <item>Tema2</item>
+        <item>Tema3</item>
     </string-array>
     <string-array name="stringhalaman">
-        <item>0</item>
+        <item>NonAktif</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -133,7 +160,7 @@
         <item>ZoomOutUp</item>
     </string-array>
     <string-array name="stringtransisi">
-        <item>DefaultTransformer</item>
+        <item>NonAktif</item>
         <item>AccordionTransformer</item>
         <item>BackgroundToForegroundTransformer</item>
         <item>DepthPageTransformer</item>

@@ -26,7 +26,7 @@ public class RestartUI extends Activity {
         setContentView(setResource("dialog","layout"));
 
         final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        String setTema_str = setTema.getString("gantiTema", "None");
         setTheme(setResource(setTema_str, "style"));
 
         reboot = (Button) findViewById(setResource("btn_reb","id"));

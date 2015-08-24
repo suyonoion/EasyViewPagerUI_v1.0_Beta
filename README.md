@@ -1,9 +1,9 @@
-# EasyViewPagerUI_v1.1_Beta
-EasyViewPagerUI v1.1 Beta Version
+# EasyViewPagerUI_v1.2_Beta2
+EasyViewPagerUI v1.2 Beta 2 Version
 
-- EasyViewPagerUI Version : v1.1 Beta
-- Build Number            : EasyVPui_v1.0_Beta_Setting_Transisi_GB+_20150824
-- Build Date              : 24 Agustus 2015
+- EasyViewPagerUI Version : v1.2 Beta 2
+- Build Number            : EasyVPui_v1.2_Beta2_Setting_Transisi_GB+_20150825
+- Build Date              : 25 Agustus 2015
 - Tested                  : GingerBread, Kitkat
 
 New Features :

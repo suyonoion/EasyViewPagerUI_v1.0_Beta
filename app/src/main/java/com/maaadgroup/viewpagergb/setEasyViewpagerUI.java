@@ -25,7 +25,7 @@ public class setEasyViewpagerUI extends PreferenceActivity implements SharedPref
         super.onCreate(paramBundle);
         addPreferencesFromResource(setResource("pref_easyviewpagerui", "xml"));
         final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        String setTema_str = setTema.getString("gantiTema", "None");
         setTheme(setResource(setTema_str,"style"));
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
         AlertDialog.Builder b = new AlertDialog.Builder(this);

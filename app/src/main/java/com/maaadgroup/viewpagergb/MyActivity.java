@@ -32,7 +32,7 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(setResource("activity_my","layout"));
         final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        String setTema_str = setTema.getString("gantiTema", "None");
         setTheme(setResource(setTema_str, "style"));
         mListView = (ListView)findViewById(setResource("list_items","id"));
         mTarget = findViewById(setResource("id_maaadgroup","id"));

@@ -54,7 +54,7 @@ public class EasyViewpagerUI extends ViewPager {
 
     private void aturTema(){
         final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getContext());
-        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        String setTema_str = setTema.getString("gantiTema", "None");
         getContext().setTheme(setResource(setTema_str, "style"));
     }
 
@@ -62,9 +62,6 @@ public class EasyViewpagerUI extends ViewPager {
 
         final SharedPreferences setHome = PreferenceManager.getDefaultSharedPreferences(getContext());
         String setHome_str = setHome.getString("jadikanHome", "0");
-
-        final SharedPreferences setIndicatorColor = PreferenceManager.getDefaultSharedPreferences(getContext());
-        String setIndicatorColor_str = setIndicatorColor.getString("ganti_warna_indikator", "NonAktif");
 
         SharedPreferences gantiIonSetTransformPages = PreferenceManager.getDefaultSharedPreferences(getContext());
         final String gantiIonSetTransformPages_str = gantiIonSetTransformPages.getString("gantiIonSetTransformPages", "NonAktif");
