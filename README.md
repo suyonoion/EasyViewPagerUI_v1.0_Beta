@@ -1,3 +1,17 @@
+# EasyViewPagerUI_v1.1_Beta
+EasyViewPagerUI v1.1 Beta Version
+
+- EasyViewPagerUI Version : v1.1 Beta
+- Build Number            : EasyVPui_v1.0_Beta_Setting_Transisi_GB+_20150824
+- Build Date              : 24 Agustus 2015
+- Tested                  : GingerBread, Kitkat
+
+New Features :
+- SetHome
+- Transisi
+- Tema
+- 
+----------------------------------------------------------------
 # EasyViewPagerUI_v1.0_Beta
 EasyViewPagerUI v1.0 Beta Version
 
