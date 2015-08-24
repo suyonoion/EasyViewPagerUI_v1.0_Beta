@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +26,8 @@ import java.util.List;
  */
 @SuppressWarnings("ALL")
 public class EasyViewpagerUI extends ViewPager {
-
-    private int NUM_VIEWS = 3;
+    private int NUM_VIEWS, NUM_HOME = 3;
+    private int pagerTitle = setResource("id_Judul_Halaman_EasyViewpagerUI","id");
     private int id_a = setResource("id_EasyViewpagerUI","id");
     private int id_b = setResource("id_Halaman_1","id");
     private int id_c = setResource("id_Halaman_2","id");
@@ -48,13 +47,30 @@ public class EasyViewpagerUI extends ViewPager {
     public EasyViewpagerUI(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (!isInEditMode()) {
-          Kode_Utama () ;
+          Kode_Utama() ;
+          aturTema();
         }
     }
 
-    private void Kode_Utama() {
+    private void aturTema(){
+        final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        getContext().setTheme(setResource(setTema_str, "style"));
+    }
+
+    public void Kode_Utama() {
+
+        final SharedPreferences setHome = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String setHome_str = setHome.getString("jadikanHome", "0");
+
+        final SharedPreferences setIndicatorColor = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String setIndicatorColor_str = setIndicatorColor.getString("ganti_warna_indikator", "NonAktif");
+
+        SharedPreferences gantiIonSetTransformPages = PreferenceManager.getDefaultSharedPreferences(getContext());
+        final String gantiIonSetTransformPages_str = gantiIonSetTransformPages.getString("gantiIonSetTransformPages", "NonAktif");
+
         SharedPreferences gantiAnimasi_pref = PreferenceManager.getDefaultSharedPreferences(getContext());
-        final String gantiAnim_str = gantiAnimasi_pref.getString("gantiANIM", "Flash");
+        final String gantiAnim_str = gantiAnimasi_pref.getString("gantiANIM", "NonAktif");
 
         SharedPreferences setJudulSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         final String isikanJudul1 = setJudulSharedPreferences.getString("setJudul1", "Page 1");
@@ -73,15 +89,24 @@ public class EasyViewpagerUI extends ViewPager {
         ViewPager viewPager = (ViewPager) findViewById(id_a);
         viewPager.setAdapter(adapter_easyViewpagerUI);
 
-        int myNumCount = 0;
+        int myNumCount = 0, myNumHome = 0;
         try {
             myNumCount = Integer.parseInt(tampilCount);
         } catch (NumberFormatException nfe) {
             TampilPemberitahuan(getContext(), "Pemberitahuan", "Oppps...!! Sepertinya string ini Tidak bisa diubah jadi int...!! " + nfe);
         }
+
+        try {
+            myNumHome = Integer.parseInt(setHome_str);
+        } catch (NumberFormatException nfe) {
+            TampilPemberitahuan(getContext(), "Pemberitahuan", "Oppps...!! Sepertinya string ini Tidak bisa diubah jadi int...!! " + nfe);
+        }
+
         setN(myNumCount);
-        viewPager.setCurrentItem(1);
+        setM(myNumHome);
+        viewPager.setCurrentItem(NUM_HOME);
         viewPager.setOffscreenPageLimit(NUM_VIEWS);
+        viewPager.setPageTransformer(true, IonSetTransformPages.valueOf(gantiIonSetTransformPages_str));
         viewPager.setOnPageChangeListener(new OnPageChangeListener() {
 
             @Override
@@ -106,8 +131,8 @@ public class EasyViewpagerUI extends ViewPager {
                         YoYo.with(Techniques.valueOf(gantiAnim_str))
                                 .duration(durasi)
                                 .playOn(page3);
-                }
-            }
+                        }
+                    }
 
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -134,6 +159,10 @@ public class EasyViewpagerUI extends ViewPager {
 
     public void setN(int N) {
         this.NUM_VIEWS = N;
+    }
+
+    public void setM(int M) {
+        this.NUM_HOME = M;
     }
 
     public class Adapter_EasyViewpagerUI extends PagerAdapter {
@@ -181,4 +210,5 @@ public class EasyViewpagerUI extends ViewPager {
             return findViewById(id_Halaman);
         }
     }
+
 }

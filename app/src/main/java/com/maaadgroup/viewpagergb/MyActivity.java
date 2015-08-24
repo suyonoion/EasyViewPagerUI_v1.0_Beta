@@ -2,7 +2,9 @@ package com.maaadgroup.viewpagergb;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +31,9 @@ public class MyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(setResource("activity_my","layout"));
+        final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        setTheme(setResource(setTema_str, "style"));
         mListView = (ListView)findViewById(setResource("list_items","id"));
         mTarget = findViewById(setResource("id_maaadgroup","id"));
         mAdapter = new EffectAdapter(this);

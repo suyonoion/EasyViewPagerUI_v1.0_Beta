@@ -25,6 +25,7 @@
 
 package com.daimajia.androidanimations.library;
 
+import com.daimajia.androidanimations.library.attention.NonAktif;
 import com.daimajia.androidanimations.library.attention.BounceAnimator;
 import com.daimajia.androidanimations.library.attention.FlashAnimator;
 import com.daimajia.androidanimations.library.attention.PulseAnimator;
@@ -86,7 +87,7 @@ import com.daimajia.androidanimations.library.zooming_exits.ZoomOutRightAnimator
 import com.daimajia.androidanimations.library.zooming_exits.ZoomOutUpAnimator;
 
 public enum Techniques {
-
+    NonAktif(NonAktif.class),
     Flash(FlashAnimator.class),
     Pulse(PulseAnimator.class),
     RubberBand(RubberBandAnimator.class),
@@ -161,7 +162,7 @@ public enum Techniques {
 
     private Class animatorClazz;
 
-    private Techniques(Class clazz) {
+    Techniques(Class clazz) {
         animatorClazz = clazz;
     }
 

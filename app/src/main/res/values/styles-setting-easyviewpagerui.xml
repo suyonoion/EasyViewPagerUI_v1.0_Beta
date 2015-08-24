@@ -1,5 +1,19 @@
 <resources>
+    <style name="NonAktif">
 
+    </style>
+    <style name="Merah">
+       <item name="android:background">#ffff0500</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Kuning">
+        <item name="android:background">#fffffc03</item>
+        <item name="android:textColor">#ff870800</item>
+    </style>
+    <style name="Hijau">
+        <item name="android:background">#ff3dd213</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
     <string name="Judul_Halaman_1">Satu</string>
     <string name="Judul_Halaman_2">Dua</string>
     <string name="Judul_Halaman_3">Tiga</string>
@@ -24,9 +38,16 @@
     <string name="str_webforum">Official Website Forum :</string>
     <string name="str_urlwebforum">http://MaaadGroup.com/</string>
     <string name="str_betavertion">Beta Version</string>
-    <string name="str_angkavertion">v1.0 Beta</string>
-    <string name="str_settingfor">Setting GB+</string>
+    <string name="str_angkavertion">v1.1 Beta</string>
+    <string name="str_settingfor">Setting Transisi GB+</string>
+    <string name="easyvpui_build_number">EasyVPui_v1.1_Beta_Setting_Transisi_GB+_20150824</string>
     <string name="copyright">© 2015 MaaadGroup.com | All rights reserved</string>
+    <string-array name="stringtema">
+        <item>None</item>
+        <item>Merah</item>
+        <item>Kuning</item>
+        <item>Hijau</item>
+    </string-array>
     <string-array name="stringhalaman">
         <item>0</item>
         <item>1</item>
@@ -40,6 +61,7 @@
         <item>3</item>
     </string-array>
     <string-array name="stringanim">
+        <item>NonAktif</item>
         <item>Flash</item>
         <item>Pulse</item>
         <item>RubberBand</item>
@@ -109,5 +131,24 @@
         <item>ZoomOutLeft</item>
         <item>ZoomOutRight</item>
         <item>ZoomOutUp</item>
+    </string-array>
+    <string-array name="stringtransisi">
+        <item>DefaultTransformer</item>
+        <item>AccordionTransformer</item>
+        <item>BackgroundToForegroundTransformer</item>
+        <item>DepthPageTransformer</item>
+        <item>ForegroundToBackgroundTransformer</item>
+        <item>CubeInTransformer</item>
+        <item>CubeOutTransformer</item>
+        <item>FlipHorizontalTransformer</item>
+        <item>FlipVerticalTransformer</item>
+        <item>RotateDownTransformer</item>
+        <item>RotateUpTransformer</item>
+        <item>StackTransformer</item>
+        <item>TabletTransformer</item>
+        <item>ZoomInTransformer</item>
+        <item>ZoomOutTranformer</item>
+        <item>ZoomOutSlideTransformer</item>
+        <item>DrawFromBackTransformer</item>
     </string-array>
 </resources>

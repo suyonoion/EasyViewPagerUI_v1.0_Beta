@@ -1,8 +1,10 @@
 package com.maaadgroup.viewpagergb;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,6 +24,10 @@ public class RestartUI extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(setResource("dialog","layout"));
+
+        final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        setTheme(setResource(setTema_str, "style"));
 
         reboot = (Button) findViewById(setResource("btn_reb","id"));
         recv = (Button) findViewById(setResource("btn_rec","id"));

@@ -23,7 +23,10 @@ public class setEasyViewpagerUI extends PreferenceActivity implements SharedPref
     protected void onCreate(Bundle paramBundle)
     {
         super.onCreate(paramBundle);
-        addPreferencesFromResource(setResource("pref_easyviewpagerui","xml"));
+        addPreferencesFromResource(setResource("pref_easyviewpagerui", "xml"));
+        final SharedPreferences setTema = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String setTema_str = setTema.getString("gantiTema", "NonAktif");
+        setTheme(setResource(setTema_str,"style"));
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
         AlertDialog.Builder b = new AlertDialog.Builder(this);
         b.setMessage(message);
@@ -42,6 +45,24 @@ public class setEasyViewpagerUI extends PreferenceActivity implements SharedPref
     public void onResume(){
         super.onResume();
 
+        final String key_tema="gantiTema";
+        ListPreference listPreference_tema=(ListPreference)findPreference(key_tema);
+        final String values_tema=PreferenceManager.getDefaultSharedPreferences(this).getString(key_tema,key_tema);
+        final int index_tema=listPreference_tema.findIndexOfValue(values_tema);
+        if (index_tema>=0){
+            final String summary_tema = (String) listPreference_tema.getEntries()[index_tema];
+            listPreference_tema.setSummary(summary_tema);
+        }
+
+        final String key_transisi="gantiIonSetTransformPages";
+        ListPreference listPreference_transisi=(ListPreference)findPreference(key_transisi);
+        final String values_transisi=PreferenceManager.getDefaultSharedPreferences(this).getString(key_transisi,key_transisi);
+        final int index_transisi=listPreference_transisi.findIndexOfValue(values_transisi);
+        if (index_transisi>=0){
+            final String summary_transisi = (String) listPreference_transisi.getEntries()[index_transisi];
+            listPreference_transisi.setSummary(summary_transisi);
+        }
+
         final String key_anim="gantiANIM";
         ListPreference listPreference_anim=(ListPreference)findPreference(key_anim);
         final String values_anim=PreferenceManager.getDefaultSharedPreferences(this).getString(key_anim,key_anim);
@@ -57,7 +78,16 @@ public class setEasyViewpagerUI extends PreferenceActivity implements SharedPref
         final int index=listPreference.findIndexOfValue(values);
         if (index>=0){
             final String summary = (String) listPreference.getEntries()[index];
-            listPreference.setSummary(summary);
+            listPreference.setSummary(summary+" Pages");
+        }
+
+        final String key_jadikanhome="jadikanHome";
+        ListPreference listPreference_jadikanhome=(ListPreference)findPreference(key_jadikanhome);
+        final String values_jadikanhome=PreferenceManager.getDefaultSharedPreferences(this).getString(key_jadikanhome,key_jadikanhome);
+        final int index_jadikanhome=listPreference_jadikanhome.findIndexOfValue(values_jadikanhome);
+        if (index_jadikanhome>=0){
+            final String summary_jadikanhome = (String) listPreference_jadikanhome.getEntries()[index_jadikanhome];
+            listPreference_jadikanhome.setSummary("Home : (Page "+summary_jadikanhome+")");
         }
 
         SharedPreferences setJudulSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -80,6 +110,28 @@ public class setEasyViewpagerUI extends PreferenceActivity implements SharedPref
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences options, String key) {
+
+        if (key.equals("gantiTema")){
+            ListPreference listPreference=(ListPreference)findPreference(key);
+            final String values=options.getString(key,key);
+            final int index=listPreference.findIndexOfValue(values);
+            if (index>=0){
+                final String summary = (String) listPreference.getEntries()[index];
+                listPreference.setSummary(summary);
+            }
+        }
+
+
+        if (key.equals("gantiIonSetTransformPages")){
+            ListPreference listPreference=(ListPreference)findPreference(key);
+            final String values=options.getString(key,key);
+            final int index=listPreference.findIndexOfValue(values);
+            if (index>=0){
+                final String summary = (String) listPreference.getEntries()[index];
+                listPreference.setSummary(summary);
+            }
+        }
+
         if (key.equals("gantiANIM")){
             ListPreference listPreference=(ListPreference)findPreference(key);
             final String values=options.getString(key,key);
@@ -96,7 +148,17 @@ public class setEasyViewpagerUI extends PreferenceActivity implements SharedPref
             final int index=listPreference.findIndexOfValue(values);
             if (index>=0){
                 final String summary = (String) listPreference.getEntries()[index];
-                listPreference.setSummary(summary);
+                listPreference.setSummary(summary+" Pages");
+            }
+        }
+
+        if (key.equals("jadikanHome")){
+            ListPreference listPreference=(ListPreference)findPreference(key);
+            final String values=options.getString(key,key);
+            final int index=listPreference.findIndexOfValue(values);
+            if (index>=0){
+                final String summary = (String) listPreference.getEntries()[index];
+                listPreference.setSummary("Home : (Page "+summary+")");
             }
         }
 

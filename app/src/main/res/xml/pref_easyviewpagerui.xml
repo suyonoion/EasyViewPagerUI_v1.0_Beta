@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   android:title="EasyViewPagerUI Settings" android:icon="@drawable/logo">
+
+    <PreferenceCategory android:title="Ganti Transisi">
+        <ListPreference
+            android:key="gantiIonSetTransformPages"
+            android:title="Pilih Transisi"
+            android:summary="Mengganti atau memilih Transisi halaman EasyViewpagerUI"
+            android:entries="@array/stringtransisi"
+            android:entryValues="@array/stringtransisi"/>
+    </PreferenceCategory>
+
+
     <PreferenceCategory android:title="Ganti Animasi">
         <ListPreference
             android:key="gantiANIM"
@@ -10,13 +21,28 @@
             android:entryValues="@array/stringanim"/>
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Tampilkan">
+    <PreferenceCategory android:title="Set Home">
+        <ListPreference
+            android:key="jadikanHome"
+            android:title="Jadikan sebagai HOME "
+            android:summary="Jadikan page terpilih sebagai Home, default 0, page 1."
+            android:entries="@array/stringhalaman"
+            android:entryValues="@array/nilaiinteger"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tampilan">
         <ListPreference
             android:key="getCount"
             android:title="Jumlah Halaman"
             android:summary="Mengatur berapa halaman yang harus ditampilkan"
             android:entries="@array/stringhalaman"
             android:entryValues="@array/nilaiinteger"/>
+        <ListPreference
+            android:key="gantiTema"
+            android:title="Mengganti Thema"
+            android:summary="Mengganti Thema EasyViewPagerUI"
+            android:entries="@array/stringtema"
+            android:entryValues="@array/stringtema"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Ganti Judul">
@@ -25,8 +51,8 @@
         <EditTextPreference android:key="setJudul3" android:title="Halaman 3" android:summary="Mengganti judul halaman 3" android:dialogTitle="Masukkan judul 3"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="Tentang">
-        <Preference android:title="EasyViewPagerUI Version" android:summary="v1.0 Beta"/>
-        <Preference android:title="Build Number" android:summary="EasyVPui_v1.0_Beta_Setting_GB+_20150817"/>
+        <Preference android:title="EasyViewPagerUI Version" android:summary="@string/str_angkavertion"/>
+        <Preference android:title="Build Number" android:summary="@string/easyvpui_build_number"/>
         <PreferenceScreen android:icon="@drawable/logo" android:title="Dev" android:summary="Suyono (ion)">
             <PreferenceCategory android:title="Facebook Profile">
                 <Preference android:title="" android:summary="https://www.facebook.com/suyono.ion">
